@@ -4,7 +4,7 @@ import java.util.Collections;
 
 public class Main{
     public static void main(String[] args) {
-        ArrayList<Person> list = new ArrayList<>(); // [cite: 35]
+        ArrayList<Person> list = new ArrayList<>();
 
         list.add(new Employee("Aibar", "Erkebulan", "Lawyer", 26512.78));
         list.add(new Employee("Sultanbek", "Aibekuly", "Builder", 52342.00));
