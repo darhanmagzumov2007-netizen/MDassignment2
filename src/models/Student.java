@@ -15,6 +15,11 @@ public class Student extends Person {
     }
 
     @Override
+    public String getPosition() {
+        return "";
+    }
+
+    @Override
     public String toString() {
         return "Student: " + super.toString();
     }
