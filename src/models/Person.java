@@ -1,16 +1,19 @@
 package models;
 
-public abstract class Person implements Payable, Comparable<Person> {
-    private static int id_gen = 1;
-    private int id;
-    private String name;
-    private String surname;
+// Используем abstract class, так как у нас есть поля и реализация
+public abstract class Person implements Payable, Comparable<Person> { // [cite: 32, 43]
+    private static int id_gen = 1; // [cite: 6]
+    private final int id;          // [cite: 6]
+    private String name;           // [cite: 7]
+    private String surname;        // [cite: 8]
 
-    public Person() {
+    // Конструктор по умолчанию
+    public Person() { // [cite: 11]
         this.id = id;
     }
 
-    public Person(String name, String surname) {
+    // Параметризованный конструктор
+    public Person(String name, String surname) { // [cite: 11]
         this();
         this.name = name;
         this.surname = surname;
@@ -20,13 +23,20 @@ public abstract class Person implements Payable, Comparable<Person> {
     public String getName() { return name; }
     public String getSurname() { return surname; }
 
+    public void setName(String name) { this.name = name; }
+    public void setSurname(String surname) { this.surname = surname; }
+
+    // Абстрактный метод getPosition, чтобы дети его реализовали
+    public abstract String getPosition(); // [cite: 12]
+
     @Override
     public String toString() {
-        return id + "." + name + "." + surname;
+        return id + ". " + name + " " + surname; // [cite: 9]
     }
 
     @Override
-    public int compareTo(Person other) {
+    public int compareTo(Person other) { // [cite: 45]
+        // Сравниваем по сумме выплат
         return Double.compare(this.getPaymentAmount(), other.getPaymentAmount());
     }
 }
