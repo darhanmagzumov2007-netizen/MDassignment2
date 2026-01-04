@@ -9,8 +9,12 @@ public class Student extends Person {
 
     public double getGpa() { return gpa; }
 
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
     @Override
-    public double getPaymentAmount() {
+    public double Payment() {
         return (gpa > 2.67) ? 36660.00 : 0.0;
     }
 

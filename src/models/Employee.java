@@ -9,11 +9,22 @@ package models;
             this.salary = salary;
         }
 
-        public String getPosition() { return position; }
-        public double getSalary() { return salary; }
+        public void setPosition(String position) {
+            this.position = position;
+        }
+
+        public String getPosition() {
+            return position; }
+
+        public void setSalary(double salary) {
+            this.salary = salary;
+        }
+
+        public double getSalary() {
+            return salary; }
 
         @Override
-        public double getPaymentAmount() {
+        public double Payment() {
             return salary;
         }
 
