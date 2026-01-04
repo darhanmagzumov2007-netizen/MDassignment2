@@ -34,7 +34,7 @@ public abstract class Person implements Payable, Comparable<Person> {
     @Override
     public String toString() {
 
-        return id + ". " + name + " " + surname; // [cite: 9]
+        return id + ". " + name + " " + surname;
     }
     @Override
     public int compareTo(Person other) {
